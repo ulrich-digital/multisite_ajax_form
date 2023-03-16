@@ -1,0 +1,622 @@
+[
+    {
+        "key": "group_63e6803ee1c1f",
+        "title": "Anlage Anfragen Formular",
+        "fields": [
+            {
+                "key": "field_64004fb67659e",
+                "label": "Anlage anfragen",
+                "name": "",
+                "aria-label": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
+            },
+            {
+                "key": "field_63ea21d4e66cd",
+                "label": "Anlage wählen",
+                "name": "anlage_wahlen",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "form_container",
+                    "id": "form_container_01"
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_63e72e5da1383",
+                        "label": "",
+                        "name": "anlage_teile",
+                        "aria-label": "",
+                        "type": "checkbox",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "Rasenhauptspielfeld": "Rasenhauptspielfeld",
+                            "Garderoben": "Garderoben",
+                            "Kunstrasenfussballplatz": "Kunstrasenfussballplatz",
+                            "Beachvolleyball": "Beachvolleyball",
+                            "Rasentrainingsfeld": "Rasentrainingsfeld",
+                            "Beachsoccer": "Beachsoccer",
+                            "Beachhandball": "Beachhandball",
+                            "Skateanlage": "Skateanlage",
+                            "Leichtathletikanlage": "Leichtathletikanlage",
+                            "Festzeltplatz": "Festzeltplatz",
+                            "Zeitmessanlage": "Zeitmessanlage"
+                        },
+                        "default_value": [],
+                        "return_format": "value",
+                        "allow_custom": 0,
+                        "layout": "vertical",
+                        "toggle": 0,
+                        "save_custom": 0
+                    }
+                ]
+            },
+            {
+                "key": "field_63e72f859d436",
+                "label": "Angaben zur Veranstaltung",
+                "name": "angaben_zur_veranstaltung",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "form_container",
+                    "id": "form_container_02"
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_63e72f8d9d437",
+                        "label": "",
+                        "name": "veranstaltungsname",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "veranstaltungsname",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Veranstaltungsname",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_63ea3146357eb",
+                        "label": "",
+                        "name": "",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "columns",
+                            "id": ""
+                        },
+                        "layout": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_63ea223f9796c",
+                                "label": "",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "group",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "group_50",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_63e72f9d9d438",
+                                        "label": "Anzahl Athleten und Trainer",
+                                        "name": "anzahl_athleten_und_trainer",
+                                        "aria-label": "",
+                                        "type": "number",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "anzahl",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "min": "",
+                                        "max": "",
+                                        "placeholder": 120,
+                                        "step": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_63e72fb59d439",
+                                        "label": "Anzahl Helfer",
+                                        "name": "anzahl_helfer",
+                                        "aria-label": "",
+                                        "type": "number",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "anzahl",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "min": "",
+                                        "max": "",
+                                        "placeholder": 120,
+                                        "step": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_63ea226744fcd",
+                                        "label": "Anzahl Zuschauer und Gäste",
+                                        "name": "anzahl_zuschauer_und_gaste",
+                                        "aria-label": "",
+                                        "type": "number",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "anzahl",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "min": "",
+                                        "max": "",
+                                        "placeholder": 120,
+                                        "step": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_63ea228e44fce",
+                                "label": "",
+                                "name": "",
+                                "aria-label": "",
+                                "type": "group",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "group_50",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_63ea152c7c6d0",
+                                        "label": "Eintritt",
+                                        "name": "eintritt",
+                                        "aria-label": "",
+                                        "type": "true_false",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "additional_service",
+                                            "id": ""
+                                        },
+                                        "message": "",
+                                        "default_value": 0,
+                                        "ui_on_text": "",
+                                        "ui_off_text": "",
+                                        "ui": 1
+                                    },
+                                    {
+                                        "key": "field_63ea22af9a832",
+                                        "label": "Festwirtschaft",
+                                        "name": "festwirtschaft",
+                                        "aria-label": "",
+                                        "type": "true_false",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "additional_service",
+                                            "id": ""
+                                        },
+                                        "message": "",
+                                        "default_value": 0,
+                                        "ui_on_text": "",
+                                        "ui_off_text": "",
+                                        "ui": 1
+                                    },
+                                    {
+                                        "key": "field_63ea22c19a833",
+                                        "label": "Grillstand",
+                                        "name": "grillstand",
+                                        "aria-label": "",
+                                        "type": "true_false",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "additional_service",
+                                            "id": ""
+                                        },
+                                        "message": "",
+                                        "default_value": 0,
+                                        "ui_on_text": "",
+                                        "ui_off_text": "",
+                                        "ui": 1
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "field_63eb5d37aa1af",
+                "label": "Datum und Uhrzeit angeben",
+                "name": "datum_und_uhrzeit_angeben",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "form_container",
+                    "id": "form_container_03"
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 1,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Datum hinzufügen",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_63eb4c5d63ca1",
+                        "label": "",
+                        "name": "datum_uhrzeit_container",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "datum_uhrzeit_container",
+                            "id": ""
+                        },
+                        "layout": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_63ea1f15ce34e",
+                                "label": "",
+                                "name": "datum",
+                                "aria-label": "",
+                                "type": "date_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "display_format": "d.m.Y",
+                                "return_format": "d.m.Y",
+                                "first_day": 1
+                            },
+                            {
+                                "key": "field_63ea1f6ece34f",
+                                "label": "",
+                                "name": "uhrzeit",
+                                "aria-label": "",
+                                "type": "group",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_63ea1f979b960",
+                                        "label": "",
+                                        "name": "von",
+                                        "aria-label": "",
+                                        "type": "time_picker",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "display_format": "H:i",
+                                        "return_format": "H:i"
+                                    },
+                                    {
+                                        "key": "field_63ea1fb59b961",
+                                        "label": "",
+                                        "name": "",
+                                        "aria-label": "",
+                                        "type": "message",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "message": "bis",
+                                        "new_lines": "wpautop",
+                                        "esc_html": 0
+                                    },
+                                    {
+                                        "key": "field_63ea1fbb9b962",
+                                        "label": "",
+                                        "name": "bis",
+                                        "aria-label": "",
+                                        "type": "time_picker",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "display_format": "H:i",
+                                        "return_format": "H:i"
+                                    },
+                                    {
+                                        "key": "field_63ea1fdc9b963",
+                                        "label": "",
+                                        "name": "",
+                                        "aria-label": "",
+                                        "type": "message",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "message": "Uhr",
+                                        "new_lines": "wpautop",
+                                        "esc_html": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "parent_repeater": "field_63eb5d37aa1af"
+                    }
+                ]
+            },
+            {
+                "key": "field_63ea237622233",
+                "label": "Kontaktangaben",
+                "name": "kontaktangaben",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "form_container",
+                    "id": "form_container_04"
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_63ea238722234",
+                        "label": "",
+                        "name": "verein_firma",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Verein\/Firma",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_63ea239522235",
+                        "label": "",
+                        "name": "kontaktperson",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Kontaktperson",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_63ea23a022236",
+                        "label": "",
+                        "name": "email",
+                        "aria-label": "",
+                        "type": "email",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "*Email",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_63ea23b622237",
+                        "label": "",
+                        "name": "telefon",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Telefon",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_63ea23ec22238",
+                        "label": "",
+                        "name": "bemerkungen",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": 4,
+                        "placeholder": "Bemerkungen",
+                        "new_lines": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_63ea24d063a82",
+                "label": "Anfrage absenden",
+                "name": "anfrage_absenden",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "form_container",
+                    "id": "form_container_05"
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_63ea298350d3a",
+                        "label": "",
+                        "name": "bedingungen",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "ja": "Der Benützer ist mit den Bedingungen des Benützungsreglementes der Stiftung Schwyzer Sport einverstanden und verpflichtet sich, die Bestimmungen einzuhalten."
+                        },
+                        "default_value": "",
+                        "return_format": "value",
+                        "allow_null": 1,
+                        "other_choice": 0,
+                        "layout": "horizontal",
+                        "save_other_choice": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/acf-anlage-rent-form"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
