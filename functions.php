@@ -1,11 +1,21 @@
 /* =============================================================== *\
-   ACF - Blocks
+   register ACF-Fields as Block
 \* =============================================================== */
 function uldi_load_blocks() {
     register_block_type(dirname(__FILE__) . '/blocks/multisite_ajax_form');
 }
-
 add_action('acf/init', 'uldi_load_blocks');
+
+/* =============================================================== *\
+	add ACF Form Head
+\* =============================================================== */
+function uldi_add_acf_form_head(){
+	if(!is_admin()){
+		// wird bei allen Seiten geladen, keine andere Lösung möglich
+		acf_form_head();
+	}
+}
+add_action('init', 'uldi_add_acf_form_head', 10, 1);
 
 /* =============================================================== *\
    Add Frontend JavaScripts
@@ -13,8 +23,8 @@ add_action('acf/init', 'uldi_load_blocks');
 
 function ud_enqueue_frontend_scripts(){
     // Multisite-Ajax-Form 
-    wp_enqueue_script('block_anlage_rent_form',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/anlage_rent_form.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form.js"), true);
-    wp_enqueue_script('block_anlage_rent_form_ajax',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/anlage_rent_form_ajax.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form_ajax.js"), true);
+    wp_enqueue_script('block_anlage_rent_form',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/multisite_ajax_form.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form.js"), true);
+    wp_enqueue_script('block_anlage_rent_form_ajax',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/multisite_ajax_form.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form_ajax.js"), true);
     wp_localize_script('block_anlage_rent_form_ajax', 'formular_anfrage_js_handler',array('ajaxurl'=> admin_url('admin-ajax.php'),'ajaxnonce'=> wp_create_nonce('my_ajax_validation')));
 
    
