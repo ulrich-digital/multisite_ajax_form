@@ -1,3 +1,4 @@
+<?php 
 /* =============================================================== *\
    register ACF-Fields as Block
 \* =============================================================== */
@@ -48,3 +49,4 @@ function multisite_ajax_form_ajax_callback() {
     wp_mail($to, $subject, $body, $headers);
     wp_die();
 }
+?>
