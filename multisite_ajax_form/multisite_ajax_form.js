@@ -14,9 +14,13 @@ jQuery(document).ready(function($){
         $(".multisite_ajax_form .acf-field-accordion .acf-accordion-title").on('click', function () {
             if ($(this).closest(".acf-field-accordion").hasClass("-open")) {
                 $(this).closest("form").removeClass("form_is_open");
+                $(".form_prev_next_container").css("display", "none");
+                $(".msg_container").css("display", "none");
             } else {
                 $(this).closest("form").addClass("form_is_open");
                 prev_next_step('init');
+                 $(".form_prev_next_container").css("display", "flex");
+                $(".msg_container").css("display", "flex");
             }
         });
 
