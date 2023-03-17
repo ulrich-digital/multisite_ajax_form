@@ -1,17 +1,17 @@
 jQuery(document).ready(function($){
     
-    if($(".rent_form").length > 0){
+    if($(".multisite_ajax_form").length > 0){
         
         /* =============================================================== *\ 
             Show-hide Form
         \* =============================================================== */
         // close accordion, if is open
-        $(".rent_form .acf-field-accordion").removeClass('-open');
-        $(".rent_form .acf-field-accordion").closest("form").removeClass("form_is_open");
-        $(".rent_form .acf-accordion-content").css("display", "none");
+        $(".multisite_ajax_form .acf-field-accordion").removeClass('-open');
+        $(".multisite_ajax_form .acf-field-accordion").closest("form").removeClass("form_is_open");
+        $(".multisite_ajax_form .acf-accordion-content").css("display", "none");
 
         // show hide toggle
-        $(".rent_form .acf-field-accordion .acf-accordion-title").on('click', function () {
+        $(".multisite_ajax_form .acf-field-accordion .acf-accordion-title").on('click', function () {
             if ($(this).closest(".acf-field-accordion").hasClass("-open")) {
                 $(this).closest("form").removeClass("form_is_open");
             } else {
@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
         });
 
         //Move Submit Button in Container
-        $('.acf-field[data-name="anlage_anfragen"]').on("click", function () {
+        $('.multisite_ajax_form .acf-field-accordion').on("click", function () {
             $(".acf-form-submit input").appendTo(".form_prev_next_container");
         });
 
@@ -55,7 +55,7 @@ jQuery(document).ready(function($){
         });
         
         // add prev + next buttons
-        $('<div class="form_prev_next_container"><div class="form_btn_prev"><i class="fa-solid fa-arrow-left"></i> zurück</div><div class="form_btn_next">weiter <i class="fa-solid fa-arrow-right"></i></div></div>').insertAfter(".rent_form > .acf-fields");
+        $('<div class="form_prev_next_container"><div class="form_btn_prev"><i class="fa-solid fa-arrow-left"></i> zurück</div><div class="form_btn_next">weiter <i class="fa-solid fa-arrow-right"></i></div></div>').insertAfter(".multisite_ajax_form > .acf-fields");
 
         $(".form_btn_prev").on("click", function () {
             prev_next_step('prev');
@@ -71,9 +71,9 @@ jQuery(document).ready(function($){
             $(".summary").empty();
             
             // add Class to the last Container (Abfrage absenden) 
-            $(".rent_form .form_container").last().addClass("hide_me");
+            $(".multisite_ajax_form .form_container").last().addClass("hide_me");
 
-            $(".rent_form .form_container").each(function(){
+            $(".multisite_ajax_form .form_container").each(function(){
                 // titles for summary
                 var $my_title = $(this).children(".acf-label").children("label").text();
 
@@ -157,7 +157,7 @@ jQuery(document).ready(function($){
                     }
 
                 }); // $(this).find("input, textarea").each(function(){
-            }); // $(".rent_form .form_container").each(function(){
+            }); // $(".multisite_ajax_form .form_container").each(function(){
 
 
             // pack repeater field siblings in a container 
@@ -191,7 +191,7 @@ jQuery(document).ready(function($){
 
         /* =============================================================== *\
            Handle prev and next properties 
-           form.rent_form
+           form.multisite_ajax_form
            - set current step to data-attribute "data-step" 
            - add / remove ".is_first_step" class 
            - add / remove ".is_last_step" class
@@ -215,7 +215,7 @@ jQuery(document).ready(function($){
                 var $prev_next_step = current_step - 1;
             }else if(prev_next == "init"){
                 var $prev_next_step = 1;
-                $(".rent_form .form_container").each(function(){
+                $(".multisite_ajax_form .form_container").each(function(){
                     $(this).removeClass("current_container");
                 });
 
@@ -228,7 +228,7 @@ jQuery(document).ready(function($){
 
             // add / remove ".current_container" class in .form_container
             $prev_next_step = $prev_next_step.toString(); 
-            $('form.rent_form').attr('data-step', $prev_next_step);
+            $('form.multisite_ajax_form').attr('data-step', $prev_next_step);
          
             $(".form_container").each(function(){
                 $(this).removeClass("current_container");
@@ -239,13 +239,13 @@ jQuery(document).ready(function($){
         
             // add / remove ".is_first_step" Class to form
             // add / remove ".is_last_step" Class to form
-            $('.rent_form').removeClass("is_last_step");
-            $('.rent_form').removeClass("is_first_step");
-            if ($('form.rent_form').attr('data-step') == minDataStep) {
-                $('.rent_form').addClass("is_first_step");                
-            } else if($('form.rent_form').attr('data-step') == maxDataStep) {
-                $('.rent_form').addClass("is_last_step");                  
+            $('.multisite_ajax_form').removeClass("is_last_step");
+            $('.multisite_ajax_form').removeClass("is_first_step");
+            if ($('form.multisite_ajax_form').attr('data-step') == minDataStep) {
+                $('.multisite_ajax_form').addClass("is_first_step");                
+            } else if($('form.multisite_ajax_form').attr('data-step') == maxDataStep) {
+                $('.multisite_ajax_form').addClass("is_last_step");                  
             }            
         }
-    } /* if($(".rent_form").length > 0) */
+    } /* if($(".multisite_ajax_form").length > 0) */
 });
