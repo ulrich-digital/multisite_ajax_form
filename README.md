@@ -11,4 +11,5 @@ Requirements:
 
 
 
-[![Watch the video](https://ulrich.digital/wp-content/uploads/2023/03/webdesign_schwyz_mehrseitiges_formular_ajax.mp4)
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)(https://ulrich.digital/wp-content/uploads/2023/03/webdesign_schwyz_mehrseitiges_formular_ajax.mp4)
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
