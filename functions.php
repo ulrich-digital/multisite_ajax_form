@@ -20,27 +20,26 @@ add_action('init', 'uldi_add_acf_form_head', 10, 1);
 /* =============================================================== *\
    add Frontend JavaScripts
 \* =============================================================== */
-
 function ud_enqueue_frontend_scripts(){
     // Multisite-Ajax-Form 
-    wp_enqueue_script('block_anlage_rent_form',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/multisite_ajax_form.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form.js"), true);
-    wp_enqueue_script('block_anlage_rent_form_ajax',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/multisite_ajax_form.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form_ajax.js"), true);
-    wp_localize_script('block_anlage_rent_form_ajax', 'formular_anfrage_js_handler',array('ajaxurl'=> admin_url('admin-ajax.php'),'ajaxnonce'=> wp_create_nonce('my_ajax_validation')));
-
-   
+    wp_enqueue_script('block_multisite_ajax_form',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/multisite_ajax_form.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form.js"), true);
+    wp_enqueue_script('block_multisite_ajax_form_ajax',  get_stylesheet_directory_uri() . "/blocks/multisite_ajax_form/multisite_ajax_form_ajax.js", array('jquery'), filemtime(get_template_directory() . "/blocks/multisite_ajax_form/multisite_ajax_form_ajax.js"), true);
+    wp_localize_script('block_multisite_ajax_form_ajax', 'multisite_ajax_form',array('ajaxurl'=> admin_url('admin-ajax.php'),'ajaxnonce'=> wp_create_nonce('multisite_ajax_form_validation')));
 }
 add_action('wp_enqueue_scripts', 'ud_enqueue_frontend_scripts');
 
 /* =============================================================== *\ 
-   AJAX Anlage anfragen
+   Multisite AJAX Form > AJAX Action
 \* =============================================================== */
-add_action('wp_ajax_anlage_anfragen_ajax', 'anlage_anfragen_ajax_callback');
-add_action('wp_ajax_nopriv_anlage_anfragen_ajax', 'anlage_anfragen_ajax_callback');
-function anlage_anfragen_ajax_callback() {
+add_action('wp_ajax_multisite_ajax_form_ajax', 'multisite_ajax_form_ajax_callback');
+add_action('wp_ajax_nopriv_multisite_ajax_form_ajax', 'multisite_ajax_form_ajax_callback');
+function multisite_ajax_form_ajax_callback() {
 
-    check_ajax_referer('my_ajax_validation', 'security');
+    // see in this file: wp_localize_script('block_multisite_ajax_form_ajax', 'multisite_ajax_form',array('ajaxurl'=> admin_url('admin-ajax.php'),'ajaxnonce'=> wp_create_nonce('multisite_ajax_form_validation')));
+    check_ajax_referer('multisite_ajax_form_validation', 'security');
 
     $my_content = $_POST['content'];
+    
     $to = 'support@ulrich.digital';
     $subject = 'Anlage-Anfrage';
     $body = $my_content;
