@@ -1,17 +1,17 @@
 {
     "_comment": "Place your comments here.",
     "name": "multisite-ajax-form",
-    "title": "My Formular-Title",
+    "title": "Multisite-AJAX-Form",
     "description": "Place your description here.",
     "style": [
         "file:./multisite_ajax_form.css"
     ],
     "category": "formatting",
-    "icon": "welcome-write-blog",
+    "icon": "clipboard",
     "keywords": [],
     "acf": {
         "mode": "edit",
         "renderTemplate": "multisite_ajax_form.php"
     },
-    "align": "full",
+    "align": "full"
 }
