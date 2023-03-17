@@ -1,4 +1,4 @@
-# multisite_ajax_form
+# Multi Page AJAX Form
 
 This is a Wordpress block for a multi-page AJAX form. 
 
