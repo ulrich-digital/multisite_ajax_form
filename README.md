@@ -9,3 +9,4 @@ Requirements:
 [Documentation and Video](https://ulrich.digital/acf-formular-per-ajax-verarbeiten/) (in German)
 
 <img width="1028" alt="multisite_ajax_form_screenshot" src="https://user-images.githubusercontent.com/12305781/225877430-63ae8708-14de-49f9-b041-8025b2236767.png">
+![multisite_ajax_form](https://user-images.githubusercontent.com/12305781/225878521-920a0d27-b81e-4436-ad23-90e29f61f63a.gif)
