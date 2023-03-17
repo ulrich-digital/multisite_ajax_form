@@ -1,6 +1,9 @@
 # multisite_ajax_form
-A Multisite Form with AJAX, for Wordpress (ACF Pro required)
 
-Read the documentation [here](https://ulrich.digital/acf-formular-per-ajax-verarbeiten/).
+This is a Wordpress block for a multi-page AJAX form. 
 
-ACF-Fields: Import the file [acf-export-multisite-ajax-form.json](https://raw.githubusercontent.com/ulrich-digital/multisite_ajax_form/main/acf-export-multisite-ajax-form.json)
+Requirements:
+- Wordpress 6.0
+- ACF Pro plugin
+
+[Documentation](https://ulrich.digital/acf-formular-per-ajax-verarbeiten/) (in German)
