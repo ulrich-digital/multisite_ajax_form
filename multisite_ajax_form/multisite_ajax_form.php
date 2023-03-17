@@ -1,7 +1,7 @@
 <?php 
 acf_form([
     'field_groups' => ['group_63e6803ee1c1f'],
-    'form_attributes' => array("class" => "rent_form"),
+    'form_attributes' => array("class" => "multisite_ajax_form"),
     'id' => 'new-facility-request',
     'post_id'  => 'new_post',
     'submit_value' => "Anfragen"
