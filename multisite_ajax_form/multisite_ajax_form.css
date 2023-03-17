@@ -1,4 +1,13 @@
-.is_frontend .rent_form{
+:root{
+    --transition: all 0.2s;
+    --box_shadow: 0 3px 6px #00000033;
+    --rounded_10: 10px; 
+    --wp--preset--color--rot: #CE1924;
+    --wp--preset--color--menu-rot: #D34443;
+    --wp--preset--color--blau: #3C3E80;
+}
+
+.is_frontend .multisite_ajax_form{
     margin: auto;
     position: relative;
     top: 0;
@@ -10,30 +19,30 @@
     flex-direction: column;
     }
 
-.rent_form .acf-field.acf-accordion{
+.multisite_ajax_form .acf-field.acf-accordion{
     background: transparent;
     border-color: transparent;
     }
 
-.rent_form .acf-field.acf-accordion:hover,
-.rent_form .acf-accordion .acf-accordion-title:hover{
+.multisite_ajax_form .acf-field.acf-accordion:hover,
+.multisite_ajax_form .acf-accordion .acf-accordion-title:hover{
     background: transparent;
     }
 
-.rent_form .acf-accordion .acf-accordion-title{
+.multisite_ajax_form .acf-accordion .acf-accordion-title{
     display: flex;
     justify-content: center;
     }
 
-.rent_form .acf-accordion .acf-accordion-title label:hover{
+.multisite_ajax_form .acf-accordion .acf-accordion-title label:hover{
     cursor: pointer;
     }
 
-.rent_form .acf-accordion .acf-accordion-title i{
+.multisite_ajax_form .acf-accordion .acf-accordion-title i{
     display: none;
     }
 
-.rent_form .acf-accordion .acf-accordion-title label{
+.multisite_ajax_form .acf-accordion .acf-accordion-title label{
     background-color: var(--wp--preset--color--blau);
     display: inline-block;
     padding: 10px 20px;
@@ -47,7 +56,7 @@
     box-shadow: var(--box_shadow);
     }
 
-.rent_form .acf-accordion .acf-accordion-title label:hover{
+.multisite_ajax_form .acf-accordion .acf-accordion-title label:hover{
     background-color:white;
     color:var(--wp--preset--color--blau);
     }
@@ -59,7 +68,7 @@
     overflow-y: hidden;
     }
 
-.is_frontend.show_form form.rent_form {
+.is_frontend.show_form form.multisite_ajax_form {
     display: flex;
     }
 
@@ -70,22 +79,22 @@
 /* =============================================================== *\ 
    ACF-Field globals
 \* =============================================================== */
-.is_frontend .rent_form .acf-fields {
+.is_frontend .multisite_ajax_form .acf-fields {
     background-color: transparent !important;
     border: 0px solid transparent !important;
     }
 
-.is_frontend .rent_form .acf-fields > .acf-field {
+.is_frontend .multisite_ajax_form .acf-fields > .acf-field {
     border-top: 0px solid transparent !important;
     }
 
-.is_frontend .rent_form .form_container > .acf-label {
+.is_frontend .multisite_ajax_form .form_container > .acf-label {
     text-align: center;
     font-size: 36px;
     }
 
-.is_frontend .rent_form .acf-fields,
-.is_frontend .rent_form .acf-field{
+.is_frontend .multisite_ajax_form .acf-fields,
+.is_frontend .multisite_ajax_form .acf-field{
     margin:0;
     padding: 0;
     }
@@ -111,53 +120,54 @@
 /* =============================================================== *\ 
    Input-Fields
 \* =============================================================== */
-.rent_form .acf-field .acf-label{
+.multisite_ajax_form .acf-field .acf-label{
     margin:0 0 0 0;
     padding: 0;
     }
 
-.rent_form .acf-field input[type=text],
-.rent_form .acf-field input[type=password],
-.rent_form .acf-field input[type=date],
-.rent_form .acf-field input[type=datetime],
-.rent_form .acf-field input[type=datetime-local],
-.rent_form .acf-field input[type=email],
-.rent_form .acf-field input[type=month],
-.rent_form .acf-field input[type=number],
-.rent_form .acf-field input[type=search],
-.rent_form .acf-field input[type=tel],
-.rent_form .acf-field input[type=time],
-.rent_form .acf-field input[type=url],
-.rent_form .acf-field input[type=week],
-.rent_form .acf-field textarea,
-.rent_form .acf-field select {
+.multisite_ajax_form .acf-field input[type=text],
+.multisite_ajax_form .acf-field input[type=password],
+.multisite_ajax_form .acf-field input[type=date],
+.multisite_ajax_form .acf-field input[type=datetime],
+.multisite_ajax_form .acf-field input[type=datetime-local],
+.multisite_ajax_form .acf-field input[type=email],
+.multisite_ajax_form .acf-field input[type=month],
+.multisite_ajax_form .acf-field input[type=number],
+.multisite_ajax_form .acf-field input[type=search],
+.multisite_ajax_form .acf-field input[type=tel],
+.multisite_ajax_form .acf-field input[type=time],
+.multisite_ajax_form .acf-field input[type=url],
+.multisite_ajax_form .acf-field input[type=week],
+.multisite_ajax_form .acf-field input[type=submit],
+.multisite_ajax_form .acf-field textarea,
+.multisite_ajax_form .acf-field select {
     border: 0px solid white;
     padding: 10px !important;
     border-radius: 10px;
     font-size: 24px;
-    font-family: 'Graphik UD';
+    font-family: 'Graphik UD', sans-serif;
     font-weight: 400;
     letter-spacing: 0.5px;
     }
 
-.rent_form .acf-field input[type=text]::placeholder,
-.rent_form .acf-field input[type=password]::placeholder,
-.rent_form .acf-field input[type=date]::placeholder,
-.rent_form .acf-field input[type=datetime]::placeholder,
-.rent_form .acf-field input[type=datetime-local]::placeholder,
-.rent_form .acf-field input[type=email]::placeholder,
-.rent_form .acf-field input[type=month]::placeholder,
-.rent_form .acf-field input[type=number]::placeholder,
-.rent_form .acf-field input[type=search]::placeholder,
-.rent_form .acf-field input[type=tel]::placeholder,
-.rent_form .acf-field input[type=time]::placeholder,
-.rent_form .acf-field input[type=url]::placeholder,
-.rent_form .acf-field input[type=week]::placeholder,
-.rent_form .acf-field textarea::placeholder,
-.rent_form .acf-field select::placeholder{
+.multisite_ajax_form .acf-field input[type=text]::placeholder,
+.multisite_ajax_form .acf-field input[type=password]::placeholder,
+.multisite_ajax_form .acf-field input[type=date]::placeholder,
+.multisite_ajax_form .acf-field input[type=datetime]::placeholder,
+.multisite_ajax_form .acf-field input[type=datetime-local]::placeholder,
+.multisite_ajax_form .acf-field input[type=email]::placeholder,
+.multisite_ajax_form .acf-field input[type=month]::placeholder,
+.multisite_ajax_form .acf-field input[type=number]::placeholder,
+.multisite_ajax_form .acf-field input[type=search]::placeholder,
+.multisite_ajax_form .acf-field input[type=tel]::placeholder,
+.multisite_ajax_form .acf-field input[type=time]::placeholder,
+.multisite_ajax_form .acf-field input[type=url]::placeholder,
+.multisite_ajax_form .acf-field input[type=week]::placeholder,
+.multisite_ajax_form .acf-field textarea::placeholder,
+.multisite_ajax_form .acf-field select::placeholder{
     font-style: italic;
     color: rgb(191, 191, 191);
-    font-family: 'Graphik UD';
+    font-family: 'Graphik UD', sans-serif;
     font-weight: 400;
     letter-spacing: 0.5px;
     }
@@ -307,7 +317,7 @@ div.acf-field[data-name="datum_und_uhrzeit_angeben"]>.acf-input {
     overflow: hidden;
     }
 
-.is_frontend .rent_form .acf-field[data-name="datum_uhrzeit_container"]{
+.is_frontend .multisite_ajax_form .acf-field[data-name="datum_uhrzeit_container"]{
     margin: 40px 40px 0 40px;
     }
 
@@ -391,11 +401,11 @@ div.acf-field[data-name="kontaktangaben"]>.acf-input {
     margin: auto;
     }
 
-.is_frontend .rent_form .acf-field[data-name="kontaktangaben"]>.acf-input .acf-field{
+.is_frontend .multisite_ajax_form .acf-field[data-name="kontaktangaben"]>.acf-input .acf-field{
     margin: 20px;
     }
 
-.rent_form .acf-required{
+.multisite_ajax_form .acf-required{
     display: none;
     }
 
@@ -428,8 +438,8 @@ div.acf-field[data-name="anfrage_absenden"]>.acf-input {
     }
 
 .summary,
-.rent_form ul.acf-radio-list.acf-hl li, 
-.rent_form ul.acf-checkbox-list.acf-hl li{
+.multisite_ajax_form ul.acf-radio-list.acf-hl li, 
+.multisite_ajax_form ul.acf-checkbox-list.acf-hl li{
     font-size: 18px;
     }
 
@@ -505,7 +515,7 @@ div.acf-field[data-name="anfrage_absenden"]>.acf-input {
     color: white;
     text-transform: uppercase;
     line-height: 1em;
-    font-family: 'Graphik UD';
+    font-family: 'Graphik UD', sans-serif;
     font-size: 24px;
     font-weight: 100;
     letter-spacing: 1.5px;
@@ -513,17 +523,18 @@ div.acf-field[data-name="anfrage_absenden"]>.acf-input {
     transition: var(--transition);
     }
     
-.rent_form input[type="submit"],
+.multisite_ajax_form input[type="submit"],
 .my_submit{
     display:none;
     }
 
-.rent_form.is_last_step input[type="submit"]{
+.multisite_ajax_form.is_last_step input[type="submit"]{
     display: block;
 }
-form.rent_form .form_container{
+form.multisite_ajax_form .form_container{
     display:none;
     opacity:0;
+    color: var(--wp--preset--color--blau);
     transition: all 2s;
     }
 
@@ -536,10 +547,11 @@ form.rent_form .form_container{
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
+    color: var(--wp--preset--color--blau);
     opacity: 0;
     }
 
-.rent_form.form_is_open .form_prev_next_container{
+.multisite_ajax_form.form_is_open .form_prev_next_container{
     opacity: 1;
     }
 
@@ -585,8 +597,8 @@ form .form_container.current_container {
         }
     }
 
-.rent_form.is_first_step .form_btn_prev,
-.rent_form.is_last_step .form_btn_next{
+.multisite_ajax_form.is_first_step .form_btn_prev,
+.multisite_ajax_form.is_last_step .form_btn_next{
     display: none;
     }   
 
@@ -595,11 +607,11 @@ form .form_container.current_container {
 /* =============================================================== *\ 
    Messages
 \* =============================================================== */
-.rent_form > .acf-notice.-error{
+.multisite_ajax_form > .acf-notice.-error{
     display: none;
     }
 
-.rent_form .acf-field .acf-notice.-error {
+.multisite_ajax_form .acf-field .acf-notice.-error {
     margin: auto;
     width: calc(100% - 60px);
     border: 0px;
@@ -653,25 +665,25 @@ form .form_container.current_container {
     }
 
 @media screen and (max-width: 800px) {
-    .rent_form .acf-field input[type=text],
-    .rent_form .acf-field input[type=password],
-    .rent_form .acf-field input[type=date],
-    .rent_form .acf-field input[type=datetime],
-    .rent_form .acf-field input[type=datetime-local],
-    .rent_form .acf-field input[type=email],
-    .rent_form .acf-field input[type=month],
-    .rent_form .acf-field input[type=number],
-    .rent_form .acf-field input[type=search],
-    .rent_form .acf-field input[type=tel],
-    .rent_form .acf-field input[type=time],
-    .rent_form .acf-field input[type=url],
-    .rent_form .acf-field input[type=week],
-    .rent_form .acf-field textarea,
-    .rent_form .acf-field select {
+    .multisite_ajax_form .acf-field input[type=text],
+    .multisite_ajax_form .acf-field input[type=password],
+    .multisite_ajax_form .acf-field input[type=date],
+    .multisite_ajax_form .acf-field input[type=datetime],
+    .multisite_ajax_form .acf-field input[type=datetime-local],
+    .multisite_ajax_form .acf-field input[type=email],
+    .multisite_ajax_form .acf-field input[type=month],
+    .multisite_ajax_form .acf-field input[type=number],
+    .multisite_ajax_form .acf-field input[type=search],
+    .multisite_ajax_form .acf-field input[type=tel],
+    .multisite_ajax_form .acf-field input[type=time],
+    .multisite_ajax_form .acf-field input[type=url],
+    .multisite_ajax_form .acf-field input[type=week],
+    .multisite_ajax_form .acf-field textarea,
+    .multisite_ajax_form .acf-field select {
         font-size: 17px;
         }
 
-    .rent_form .acf-field label{
+    .multisite_ajax_form .acf-field label{
         font-size: 17px;
         line-height: 1.25em;
         }
@@ -683,7 +695,7 @@ form .form_container.current_container {
         }
 
     /* Form Container 02*/
-    .is_frontend .rent_form .form_container[data-name="angaben_zur_veranstaltung"] .acf-input .acf-label {
+    .is_frontend .multisite_ajax_form .form_container[data-name="angaben_zur_veranstaltung"] .acf-input .acf-label {
         font-size: 18px;
         }
 
@@ -714,7 +726,7 @@ form .form_container.current_container {
         }
 
     /* Form Container 03 */
-    .is_frontend .rent_form .acf-field[data-name="datum_uhrzeit_container"]{
+    .is_frontend .multisite_ajax_form .acf-field[data-name="datum_uhrzeit_container"]{
         margin: 10px 10px 0 10px;
         }
 
@@ -722,18 +734,18 @@ form .form_container.current_container {
         margin:10px;
         }
 
-    .is_frontend .rent_form .acf-field[data-name="datum_uhrzeit_container"] .acf-field[data-name="datum"] input{
+    .is_frontend .multisite_ajax_form .acf-field[data-name="datum_uhrzeit_container"] .acf-field[data-name="datum"] input{
         width: 100%;
         }
 
-    .is_frontend .rent_form .aufraumen{
+    .is_frontend .multisite_ajax_form .aufraumen{
         padding: 0 20px;
         }
     }
 
 @media screen and (max-width: 500px) {
     
-    .is_frontend .rent_form .form_container>.acf-label{
+    .is_frontend .multisite_ajax_form .form_container>.acf-label{
         font-size: 24px;
         line-height: 1.25em;
         }
@@ -747,7 +759,7 @@ form .form_container.current_container {
         font-size: 20px;
         }
 
-    .rent_form .acf-accordion .acf-accordion-title label{
+    .multisite_ajax_form .acf-accordion .acf-accordion-title label{
         font-size: 20px;
         }
 
@@ -756,8 +768,8 @@ form .form_container.current_container {
         justify-content: flex-start;
         }
         
-    .rent_form .acf-field-group[data-name="uhrzeit"] [data-name="von"] input,
-    .rent_form .acf-field-group[data-name="uhrzeit"] [data-name="bis"] input{
+    .multisite_ajax_form .acf-field-group[data-name="uhrzeit"] [data-name="von"] input,
+    .multisite_ajax_form .acf-field-group[data-name="uhrzeit"] [data-name="bis"] input{
         width: 100%;
         }
     }
