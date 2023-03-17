@@ -8,17 +8,23 @@ jQuery(document).ready(function ($) {
         $my_content = $(".summary").html();
 
         //  Bedingungen checked?
-        if($('#acf-field_63ea24d063a82-field_63ea298350d3a-ja').is(':checked')){
+        if ($('.acf-field[data-name="bedingungen"] .acf-input label').hasClass('selected')) {
             $(".msg_failed").css("display", "none");
 
+
+            /*
+            url: functions.php -> wp_localize_script('block_multisite_ajax_form_ajax', 'multisite_ajax_form' -> use this term
+            action: functions.php -> add_action('wp_ajax_multisite_ajax_form_ajax'... -> use this term without wp_ajax_
+            security: functions.php -> add_action('wp_ajax_multisite_ajax_form_ajax'... -> use this term without wp_ajax_
+            */
+            
             $.ajax({
                 cache: false,
                 type: 'POST',
-                url: formular_anfrage_js_handler.ajaxurl,
+                url: multisite_ajax_form.ajaxurl,
                 data: {
-                    action: 'anlage_anfragen_ajax',
-                    title: formular_anfrage_js_handler.title,
-                    security: formular_anfrage_js_handler.ajaxnonce,
+                    action: 'multisite_ajax_form_ajax',
+                    security: multisite_ajax_form.ajaxnonce,
                     content: $my_content
                 },
                 datatype: "html",
@@ -29,11 +35,11 @@ jQuery(document).ready(function ($) {
                     $(".msg_success").fadeIn("slow").delay(5000).fadeOut("slow");
 
                     // Akkordion schliessen
-                    $(".rent_form .acf-field-accordion.-open").removeClass("-open");
-                    $(".rent_form .acf-accordion-content").css("display", "none");
+                    $(".multisite_ajax_form .acf-field-accordion.-open").removeClass("-open");
+                    $(".multisite_ajax_form .acf-accordion-content").css("display", "none");
 
                     // Formular-Navigation ausblenden
-                    $(".rent_form .form_prev_next_container").css("display", "none");
+                    $(".multisite_ajax_form .form_prev_next_container").css("display", "none");
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     console.log(errorThrown);
