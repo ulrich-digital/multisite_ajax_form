@@ -42,10 +42,20 @@ function multisite_ajax_form_ajax_callback() {
     $my_content = $_POST['content'];
     
     $to = 'support@ulrich.digital';
+    if(get_field("e-mail-anlage-anfragen-formular", "options")){
+        $to = get_field("e-mail-anlage-anfragen-formular", "options");
+    }
+    if(get_field("entwicklermodus", "options")):
+        if(get_field("dev-e-mail-anlage-anfragen-formular", "options")):
+            $to = get_field("dev-e-mail-anlage-anfragen-formular", "options");
+        endif;
+    endif;
+	
     $subject = 'Anlage-Anfrage';
     $body = $my_content;
     $headers = array('Content-Type: text/html; charset=UTF-8');
-    
+    $headers[] = 'From: Name Name <your-email@email.ch>';
+
     wp_mail($to, $subject, $body, $headers);
     wp_die();
 }
